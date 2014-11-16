@@ -42,8 +42,10 @@ C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\index_edgePreload.js \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\media-queries.css \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\pages \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\plugins \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\temp-response.css \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\css\animate.css \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\css\font \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\css\index.css \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\css\font\flaticon.css \
@@ -59,10 +61,21 @@ C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\images\bus28.svg \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\images\Capture.PNG \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\images\flaticon.svg \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\images\Sans titre-2 \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\img\logo.png \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular-animate.min.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular-animate.min.js.map \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular-hammer.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular-route.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular-route.min.js.map \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angular.min.js.map \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\angularApp.js \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\design.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\hammer.min.js \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\js\index.js \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\pages\home.html \
+C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\pages\test.html \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\plugins\org.apache.cordova.battery-status \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 C:\Users\Zakariae\Documents\NetBeansProjects\HTML5Application\platforms\android\assets\www\plugins\org.apache.cordova.contacts \

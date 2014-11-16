@@ -1,8 +1,16 @@
-
+*{
+    transition: 0.3s ease-in-out;
+    /*cursor: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    
+}
 body {
     background-color: rgba(34,34,34,1.00);
-        overflow: hidden;
+    overflow: hidden;
     display: block;
+    -webkit-backface-visibility: hidden; 
 }
 
 .menu {
@@ -60,6 +68,16 @@ body {
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: buttonClick;
+    -moz-animation-duration:0.3s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    animation-name: buttonClick;
+    animation-duration:0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 @-webkit-keyframes buttonClick{
 0%{ 
@@ -105,7 +123,7 @@ div.home.toRight{
     position: absolute;
     height: auto;
     width: 100%;
-    top: 70px;
+    top: 60px;
 }
 
 .subMenus > div:nth-child(1){
@@ -133,7 +151,7 @@ div.home.toRight{
     transition: 1s ease-in-out;
     opacity: 1;
     margin: 0;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .subMenusContent {
@@ -206,5 +224,72 @@ div.home.toRight{
     height: 200px;
 }
 
+.isPage {
+    clear: both;
+    width: 100% !important;
+}
+.isPage .subMenusContent{
+  height:40px;
+}
 
+ 
+@-webkit-keyframes bounceOut {
+    0% {opacity:1;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3,0.3,0.3);
+        transform: scale3d(0.3,0.3,0.3);
+    }
+}
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity:0;
+        -webkit-transform: scale3d(0.3,0.3,0.3);
+        transform: scale3d(0.3,0.3,0.3);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+}
+ 
+
+ 
+.bounce.ng-enter, .bounce.ng-leave {
+    -webkit-transition: -webkit-animation;
+    -webkit-transition-duration: 0.9s;
+    -webkit-transition-delay:-webkit-animation 0.9s;
+}
+ 
+.bounce.ng-enter {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+}
+.bounce.ng-leave {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+ 
+.bounce.ng-enter.ng-enter-active {
+    -webkit-animation: bounceIn 0.9s;
+}
+.bounce.ng-leave.ng-leave-active {
+    -webkit-animation: bounceOut 0.9s;
+}
+ 
+ 
+#menu,#pageRight{
+    -webkit-transition:-webkit-transform;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-delay:0s;
+}
+ 
 
