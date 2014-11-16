@@ -1,0 +1,9 @@
+.subMenus {
+	width: 50%;
+	float: left;
+	margin: 0px;
+	opacity: 1;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+	height: 150px;
+}

@@ -13,8 +13,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_menuButtonClick2}", "touchstart", function(sym, e) {
+      
+
+      Symbol.bindElementAction(compId, symbolName, "${_menuButtonClick2}", "click", function(sym, e) {
+         
          sym.getSymbol("menuButtonClick2").play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_menu2Copy}", "swipeleft", function(sym, e) {
+         // Insérer le code à exécuter lorsqu’un événement swipeleft survient au niveau d’un élémenco,
+         console.log("yes");
 
       });
       //Edge binding end
@@ -59,7 +69,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
    //Edge symbol: 'buttonMenu'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_menuButton}", "click", function(sym, e) {
+            Symbol.bindElementAction(compId, symbolName, "${_menuButton}", "click", function(sym, e) {
          	
          	sym.getSymbol("menuClicked2").play();
          	
@@ -70,9 +80,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	
 
       });
-      //Edge binding end
+         //Edge binding end
+
+
 
    })("buttonMenu");
    //Edge symbol end:'buttonMenu'
+
+   //=========================================================
+   
+   //Edge symbol: 'Symbol_2'
+   (function(symbolName) {   
+   
+   })("Symbol_2");
+   //Edge symbol end:'Symbol_2'
 
 })(jQuery, AdobeEdge, "content");

@@ -1,115 +1,209 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
+    background-color: rgba(34,34,34,1.00);
+}
+
+.menu {
+    position: absolute; 
+    margin: 0px; 
+    left:50px; top: 16px; width: 34px; 
+    height: 31px; right: auto; bottom: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(34,34,34,1.00);
+    z-index:0;
+    transition: 0.3s ease-in-out;
+   
+}
+
+.menuButton {
+    position: absolute;
+    top:15px;
+    left: 10px;
+    width: 25px;
+    height: auto;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+.menuButton div.line{
+    margin-bottom:5px;
+    width: 25px;
+    height: 2px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.menuButton div.lastLine{
+    margin-bottom:0px;
+}
+.menuButton div.isClicked{
     margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:-130%;
+    left: -70%;
+    background-color: rgba(255, 255, 255,0.1);
+    border-radius: 100%;
+    opacity: 0;
+    transform: scale(0, 0);
+    -webkit-animation-name: buttonClick;
+    -webkit-animation-duration:0.3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
 }
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+@-webkit-keyframes buttonClick{
+0%{ 
+    -webkit-transform: scale(0, 0);
+    opacity: 0;
+    }
+99%{ 
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 1;
+    }
+    100%{ 
+    -webkit-transform: scale(0, 0);
+    opacity: 0;
+    }
 }
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+@keyframes buttonClick{
+0%{ 
+    transform: scale(0, 0);
+    opacity: 0;
+    }
+99%{ 
+    transform: scale(1.2, 1.2);
+    opacity: 1;
+    }
+100%{ 
+    transform: scale(0, 0);
+    opacity: 0;
     }
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+
+
+.toRight .menuButton{
+    transform: rotate(90deg);
 }
 
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+div.home.toRight{
+ transform: translateX(70%) scale(0.8,0.8);
 }
 
-.event.listening {
-    background-color:#333333;
-    display:block;
+
+.menus {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 70px;
 }
 
-.event.received {
-    background-color:#4B946A;
-    display:none;
+.subMenus > div:nth-child(1){
+    position: absolute;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(34,34,34);
+    color:rgb(83, 225, 130);
+    z-index: 1;
+    top: -20px;
+    left: -10px
+}
+.subMenus div i{
+    position: relative;
+    font-size: 20px;
+    top:12px;
+    left: 15px;
 }
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+.subMenus {
+    position: relative;
+    opacity: 0;
+    transform: opacity;
+    transition: 1s ease-in-out;
+    opacity: 1;
+    margin: 0;
+    margin-bottom: 20px
 }
+
+.subMenusContent {
+    position: relative;
+    z-index: -1;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 120px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.65098) 0px 3px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.65098) 0px 3px 3px 0px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    background-color: rgb(83, 225, 130);
+}
+.subMenusContent .icons{
+ position: absolute;
+ right: 12px;
+ font-size: 24px;
+ top:7px;
+ color : #4AC471;
+    
+}
+
+.subMenusContentTitle {
+    position: relative;
+    margin: 0px;
+    top: 8px;
+    width: 100%;
+    height: 31px;
+    right: auto;
+    bottom: auto;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-decoration: none;
+    font-style: normal;
+    text-align: center;
+}
+
+.subMenuContentImage {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 79px;
+    -webkit-background-size: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-image: url(/images/Capture.PNG);
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;  
+}
+
+.transparent {
+    position: relative;
+    border-top:2px solid #4AC471;
+    height: 100%;
+    width: 100%;
+    background: rgba(83, 225, 130,0.8);
+   
+}
+.temperature{
  
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
 }
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+.temperature .subMenusContent .subMenuContentImage{
+  height: 160px;
 }
+.temperature .subMenusContent{
+    height: 200px;
+}
+
+
+
