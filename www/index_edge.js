@@ -1,7 +1,7 @@
 /**
  * Adobe Edge: symbol definitions
  */
-(function($, Edge , compId){
+(function($, Edge, compId){
 //images folder
 var im='images/';
 
