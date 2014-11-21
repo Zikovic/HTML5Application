@@ -8,6 +8,7 @@ function isClick(elem){
 $(".menuButton").click(function(){
     isClick($(this));
     $(".home").toggleClass("toRight");
+    $(".menu").toggleClass("toRight")
 });
 
 /*

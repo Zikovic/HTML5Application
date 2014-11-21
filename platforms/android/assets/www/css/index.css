@@ -7,7 +7,7 @@
     
 }
 body {
-    background-color: rgba(34,34,34,1.00);
+    background-color: rgba(34,34,34,1.0);
     overflow: hidden;
     display: block;
     -webkit-backface-visibility: hidden; 
@@ -19,6 +19,34 @@ body {
     left:50px; top: 16px; width: 34px; 
     height: 31px; right: auto; bottom: auto;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+@-webkit-keyframes title{
+    0%{ opacity: 0;
+        transform: translateX(-100%);}
+    60%{
+    opacity: 0;
+    }
+    100%{ 
+        opacity: 1;
+        transform: translateX(0%);}
+}
+.home>p{
+    position: absolute;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size: 20px;
+    color: #fff;
+     -webkit-animation-name: title;
+    -webkit-animation-duration:1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    
+    
 }
 
 .home {
@@ -152,6 +180,8 @@ div.home.toRight{
     opacity: 1;
     margin: 0;
     margin-bottom: 20px;
+    float: left;
+    width: 50%;
 }
 
 .subMenusContent {
@@ -160,10 +190,10 @@ div.home.toRight{
     margin-left: 10px;
     margin-right: 10px;
     height: 120px;
-    border-radius: 4px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.65098) 0px 3px 3px 0px;
+    border-radius: 2px;
+ /*   -webkit-box-shadow: rgba(0, 0, 0, 0.65098) 0px 3px 3px 0px;
     box-shadow: rgba(0, 0, 0, 0.65098) 0px 3px 3px 0px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
     overflow: hidden;
     background-color: rgb(83, 225, 130);
 }
@@ -212,10 +242,13 @@ div.home.toRight{
     height: 100%;
     width: 100%;
     background: rgba(83, 225, 130,0.8);
+    clear: both;
    
 }
 .temperature{
- 
+    width: 100%;
+    float:right;
+    
 }
 .temperature .subMenusContent .subMenuContentImage{
   height: 160px;
@@ -293,3 +326,50 @@ div.home.toRight{
 }
  
 
+
+.StopsLine {
+    padding: 0;
+    margin: 0;
+    
+}
+.StopsLine li{
+height: 50px;
+list-style-type: none;
+position: relative;
+margin-left: 30px;
+margin-right: 15px;
+    
+}
+.StopsLine li p{
+    text-align: right;;
+    padding-top:16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    margin-left: 25px;
+    color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding-right:15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+}
+.StopsLine li div.cyrcleShape{
+    height: 11px;
+    width:11px;
+    border-radius: 100%;
+    border: 1px solid rgb(119, 119, 119);
+    position: absolute;
+    top:20px;
+   background-color: rgba(34,34,34,1.0);
+}
+
+.stop div.lineShape {
+   height: 100%;
+   position: absolute;
+    left: 6px;
+    border-left: 1px solid  rgb(119, 119, 119);
+    top:30px
+    
+}

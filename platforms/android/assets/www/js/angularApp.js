@@ -18,26 +18,36 @@ app.config(['$routeProvider', '$locationProvider',
 
 
 
-app.controller('homeController',function($scope,$location){
-    
-$scope.test=function(){
-     $location.path("/test");
-}
+app.controller('homeController',function($scope,$rootScope,$location){
+
+      $rootScope.titles = function (title){
+        $('.home>p').remove();
+        $('.home').append("<p>"+title+"</p>");
+      }
+      
+      $rootScope.titles("Bienvenue");
+        $scope.test=function(){
+             $location.path("/test");
+        }
 $scope.onHammer = function onHammer(event) {
-         var elem = event.target;
+    var elem = event.target;
     console.log(elem);
     $(elem).css({
         left:event.center.x+'px'
     });
        
 };   
+    
+    $scope.topage = function(){
+        $scope.test();
+    }
 
     
 
 });
 
-app.controller('testController',function(){
-     
+app.controller('testController',function($rootScope){
+     $rootScope.titles("Tests");
 
 });
 
