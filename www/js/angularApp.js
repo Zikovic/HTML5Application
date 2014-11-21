@@ -19,7 +19,7 @@ app.config(['$routeProvider', '$locationProvider',
 
 
 
-
+ 
 
 app.controller('homeController',function($scope,$rootScope,$location){
 
